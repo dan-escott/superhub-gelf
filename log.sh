@@ -9,7 +9,7 @@ jsonKeySuffixDate="2"
 jsonKeySuffixLevel="5"
 jsonKeySuffixMessage="7"
 
-status=$(curl -sb -H "Accept: application/json" "http://$superhubAddress/getRouterStatus?_n=02521&_=1627433543015")
+status=$(curl -sb -H "Accept: application/json" "http://$superhubAddress/getRouterStatus?_n=02521&_=$(date +'%s000')")
 dateKeys=($(jq -r --arg KEY "$jsonBaseKey$jsonKeySuffixDate" 'to_entries | map(select(.key | match($KEY))) | map(.key) | .[] | @sh' <<< "$status")) 
 
 if [ -f "last-log" ]; then
