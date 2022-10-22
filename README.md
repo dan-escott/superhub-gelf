@@ -29,6 +29,7 @@ Clone the repo, install the dependencies and set up a cron task to run the bash 
     * `192.168.100.1` if in modem mode
 * `log_server`: IP address or hostname of server that will receive the logs (eg, a running Graylog instance)
 * `log_server_port`: the UDP port on which the log server accepts GELF input (eg, `12201` by default for Graylog)
+* `timezone`: the time zone of the superhub (defaults to UTC)
 
 ### Dependencies
 

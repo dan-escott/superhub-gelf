@@ -2,7 +2,7 @@
 superhubAddress=$1
 gelfAddress=$2
 gelfPort=$3
-hubTimezone=${4:-"Europe/London"}
+hubTimezone=${4:-"UTC"}
 
 jsonBaseKey="1.3.6.1.2.1.69.1.5.8.1."
 jsonKeySuffixDate="2"
